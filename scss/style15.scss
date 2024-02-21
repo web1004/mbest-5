@@ -1,0 +1,128 @@
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.mockup{
+  .moblie-mockup{ // 모바일 본체
+    border: 1px solid #000;
+    background-color: #333333;
+    width: 410px;
+    height: 830px;
+    position: relative;
+    border-radius: 30px;
+    &::before{ // 모바일 본체 단차,그림자
+      content: '';
+      // border: 1px solid red;
+      width: 97.5%;
+      height: 98.5%;
+      border-radius: 27px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      box-shadow: 0 0 10px rgba(255,255,255,0.6);
+    }
+    .iframe-url{ // 모바일 화면 부분
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 395px;
+      height: 815px;
+      border-radius: 25px;
+      background-color: #eee;
+      // border: 1px solid #eee;
+      color: #fff;
+      //Centering
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+      //iframe
+      iframe{
+        width: inherit;
+        height: inherit;
+      }
+    }
+  }
+  .camera{ //카메라 눈깔
+    // border: 1px solid #000;
+    width: 400px;
+    height: 55px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    span{
+      background-color: #222;
+      position: absolute;
+      &:nth-child(1){
+        width: 120px;
+        height: 20px;
+        border-radius: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &:nth-child(2){
+        background-color: #000;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        left: 145px;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 1px solid #555;
+      }
+    }
+  }
+  .power{
+    // border: 1px solid #000;
+    position: absolute;
+    right: 0;
+    top: 200px;
+    span{
+      position: absolute;
+      width: 5px;
+      height: 80px;
+      border-radius: 0 5px 5px 0;
+      // background-color: blue;
+    }
+  }
+  .volume{
+    // border: 1px solid #000;
+    position: absolute;
+    width: 5px;
+    height: 150px;
+    top: 200px;
+    right: 100%;
+    span{
+      position: absolute;
+      width: 5px;
+      height: 40px;
+      border-radius: 5px 0 0 5px;
+      transform: rotateY('180deg');
+      &:nth-child(1){
+        top: 0;
+        height: 30px;
+      }
+      &:nth-child(2){
+        bottom: 55px;
+      }
+      &:nth-child(3){
+        bottom: 0;
+      }
+    }
+  }
+  .volume span,
+  .power span{
+    background-color: #111;
+  }
+}
+
+
